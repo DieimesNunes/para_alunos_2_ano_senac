@@ -1,4 +1,14 @@
+<?php
+    include ("conexao.php");
 
+    $consultar_banco = "SELECT * FROM pedido";
+
+    $retorno_consulta = $mysqli->query( $consultar_banco) or die($mysqli->error);
+    $quantidade_pedidos = $retorno_consulta->num_rows; // Retornar quantidade de linhas
+
+   
+
+?>
 
 
 
@@ -26,12 +36,22 @@
                 <th>Telefone</th>
                 <th>Pedido</th>
             </tr>
-            <tr>
-                <td>Dieimes</td>
-                <td>Avenida Brasil</td>
-                <td>99999999</td>
-                <td>Lanche</td>
-            </tr>
+
+                <?php
+                    while ($pedidos = $retorno_consulta -> fetch_assoc()){
+                ?>
+                <tr>
+                    <td><?php echo $pedidos['nome']; ?></td>
+                    <td><?php echo $pedidos['endereco']; ?></td>
+                    <td><?php echo $pedidos['telefone']; ?></td>
+                    <td><?php echo $pedidos['pedido']; ?> </td>
+                    
+                </tr>
+                <?php
+                    }
+                
+                ?>
+            
         </table>
         
     </div>

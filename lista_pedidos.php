@@ -54,6 +54,7 @@
                 ?>
             
         </table>
+        <a class="btn btn-warning" href="pedido.php">Voltar</a>
         
     </div>
 

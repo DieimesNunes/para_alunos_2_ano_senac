@@ -35,6 +35,7 @@
                 <th>Endereço</th>
                 <th>Telefone</th>
                 <th>Pedido</th>
+                <th>Funcionalidades</th>
             </tr>
 
                 <?php
@@ -45,7 +46,7 @@
                     <td><?php echo $pedidos['endereco']; ?></td>
                     <td><?php echo $pedidos['telefone']; ?></td>
                     <td><?php echo $pedidos['pedido']; ?> </td>
-                    
+                    <td><a class="btn btn-danger" href="deletar_pedido.php?codigo_pedido=<?php echo $pedidos['id_pedido'];?>">Deletar</a></td>
                 </tr>
                 <?php
                     }

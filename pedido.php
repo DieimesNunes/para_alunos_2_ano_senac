@@ -55,6 +55,7 @@
             <div class="mb-3">
                 <input class="btn btn-success" type="submit" value="Pedir">
                 <a class="btn btn-danger" href="index.php">Cancelar</a>
+                <a class="btn btn-primary" href="lista_pedidos.php">Pedidos</a>
             </div>
         </form>
     </div>

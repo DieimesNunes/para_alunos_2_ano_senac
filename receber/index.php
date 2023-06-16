@@ -11,7 +11,7 @@
             }
         }
         
-        var_dump($arquivo);
+       // var_dump($arquivo);
         
         $nome = $_POST['bt_nome'];
 
@@ -25,11 +25,11 @@
         $caminho = $pasta . $novo_nome_arquivo . "."  . $extensao;
 
         
-        /*
-        if($extensao != "jpg"){
+        
+        if($extensao !="jfif" and "jpg"){
             die("Tipo de arquivo não aceito");
         }
-        */
+        
 
         $deucerto = move_uploaded_file($arquivo["tmp_name"], $caminho);
 
